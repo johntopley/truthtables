@@ -1,0 +1,7 @@
+= Truth Tables
+
+Truth Tables is a handy Boolean algebra reference for programmers.
+
+== Dependencies
+
+* Truth Tables uses the haml and sass gems
