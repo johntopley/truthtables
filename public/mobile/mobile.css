@@ -28,7 +28,4 @@ body {
   text-shadow: rgba(0,0,0,.7) 0px -1px 0px;
   top: 0;
   width: 100%;
-}
-#home, #and, #nand, #nor, #or, #xor {
-  display: none;
-}    
+}   

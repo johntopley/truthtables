@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'haml'
-require 'sass'
+#require 'sass'
 
 set :haml, { :format => :html5 }
 
@@ -10,7 +10,7 @@ end
 
 get '/', :agent => /Apple.*Mobile.*Safari/ do
   #haml :iphone
-  redirect '/mobile/index.html'
+  redirect '/index.html'
 end
 
 get '/' do
