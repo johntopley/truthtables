@@ -4,6 +4,9 @@
   <head>
     <meta charset='UTF-8'>
     <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1; user-scalable=0;">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-startup-image" href="apple-touch-startup.png">
     <title>Truth Tables</title>
     <style media="screen" type="text/css">
       @import "/mobile/jqtouch/jqtouch.css";
@@ -19,40 +22,40 @@
   </head>
   <body>
     <script type="text/javascript">
+      $(document).ready(function() {
         if (window.navigator.standalone) {
-        //alert("Standalone");
-        $("body").load("/iphone.html", function() {
-          jQT = new $.jQTouch({
-            icon: "apple-touch-icon.png",
-            startupScreen: "apple-touch-startup.png",
-            preloadImages: [
-              "/mobile/jqtouch/themes/apple/img/backButton.png",
-              "/mobile/jqtouch/themes/apple/img/chevron.png",
-              "/mobile/jqtouch/themes/apple/img/listGroup.png",
-              "/mobile/jqtouch/themes/apple/img/loading.gif",
-              "/mobile/jqtouch/themes/apple/img/pinstripes.png",
-              "/mobile/jqtouch/themes/apple/img/selection.png",
-              "/mobile/jqtouch/themes/apple/img/thumb.png",
-              "/mobile/jqtouch/themes/apple/img/toggle.png",
-              "/mobile/jqtouch/themes/apple/img/toggleOn.png",
-              "/mobile/jqtouch/themes/apple/img/toolbar.png",
-              "/mobile/jqtouch/themes/apple/img/toolButton.png",
-            ]
+          //alert("Standalone");
+          $("body").load("/iphone.html", function() {
+            var jQT = new $.jQTouch({
+              preloadImages: [
+                "/mobile/jqtouch/themes/apple/img/backButton.png",
+                "/mobile/jqtouch/themes/apple/img/chevron.png",
+                "/mobile/jqtouch/themes/apple/img/listGroup.png",
+                "/mobile/jqtouch/themes/apple/img/loading.gif",
+                "/mobile/jqtouch/themes/apple/img/pinstripes.png",
+                "/mobile/jqtouch/themes/apple/img/selection.png",
+                "/mobile/jqtouch/themes/apple/img/thumb.png",
+                "/mobile/jqtouch/themes/apple/img/toggle.png",
+                "/mobile/jqtouch/themes/apple/img/toggleOn.png",
+                "/mobile/jqtouch/themes/apple/img/toolbar.png",
+                "/mobile/jqtouch/themes/apple/img/toolButton.png",
+              ]
+            });
           });
-        });
-      } else {
-        //alert("Not standalone");
-        $("body").load("/installation.html", function() {
-          var ctx = document.getCSSCanvasContext("2d", "arrow", 30, 30);
-          ctx.fillStyle = "rgb(255,255,255)";
-          ctx.beginPath();
-          ctx.moveTo(0, 0);
-          ctx.lineTo(30, 0);
-          ctx.lineTo(15,23);
-          ctx.closePath();
-          ctx.fill();
-        });
-      }
+        } else {
+          //alert("Not standalone");
+          $("body").load("/installation.html", function() {
+            var ctx = document.getCSSCanvasContext("2d", "arrow", 30, 30);
+            ctx.fillStyle = "rgb(255,255,255)";
+            ctx.beginPath();
+            ctx.moveTo(0, 0);
+            ctx.lineTo(30, 0);
+            ctx.lineTo(15,23);
+            ctx.closePath();
+            ctx.fill();
+          });
+        }
+      });
     </script>
   </body>
 </html>
