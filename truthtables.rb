@@ -23,3 +23,8 @@ end
 get '/' do
   haml :index
 end
+
+get '/web.css' do
+  headers 'Content-Type' => 'text/css; charset=utf-8'
+  sass :web
+end

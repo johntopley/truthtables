@@ -1,0 +1,120 @@
+!white = #fff
+!darkgreen = #2b4c0a
+!mediumgreen = #4a751f
+!lightgreen = #b5f278
+!grey = #999
+!ortop = "250px"
+!andtop = "490px"
+
+body
+  background = !white
+  font: 1.5em Helvetica, Arial, sans-serif
+  margin: 10px
+  padding: 0
+
+h1, h2, p
+  position: absolute
+
+h1
+  color = !darkgreen
+  font-size: 1.8em
+  left: 270px
+  top: 136px
+
+h2
+  color = !mediumgreen
+  font-size: 0.8em
+  left: 282px
+  top: 385px
+
+a
+  color = !grey
+  text-decoration: none
+
+  &:hover
+    text-decoration: underline
+    color = !grey
+
+  &:active
+    color = !grey
+
+p
+  color = !grey
+  font-size: 0.4em
+  left: 338px
+  top: 440px
+
+table
+  background = !white
+  border-collapse: collapse
+  color = !lightgreen
+
+th
+  border-bottom = 2px "solid" !white
+  color = !white
+  font-weight: normal
+  background = !mediumgreen
+  padding: 5px
+  text-align: left
+
+td
+  background = !mediumgreen
+  padding: 5px
+  text-align: left
+
+#and, #nand, #nor, #or, #xor
+  position: absolute
+
+#and
+  left: 130px
+  top = !andtop
+
+#nand
+  left: 460px
+  top = !andtop
+
+#nor
+  left: 515px
+  top = !ortop
+
+#or
+  left: 305px
+
+#xor
+  left: 72px
+  top = !ortop
+
+.input
+  border-right = 2px "solid" !white
+  color = !white
+  text-align: right
+
+.operation
+  -webkit-border-top-left-radius: 8px
+  -moz-border-radius-topleft: 8px
+  border-top-left-radius: 8px
+  border-right = 2px "solid" !white
+  color = !white
+  font-weight: bold
+
+.symbol
+  color = !lightgreen
+  font-weight: normal
+
+.false
+  background = !darkgreen
+
+.topright
+  -webkit-border-top-right-radius: 8px
+  -moz-border-radius-topright: 8px
+  border-top-right-radius: 8px
+
+.bottomright
+  -webkit-border-bottom-right-radius: 8px
+  -moz-border-radius-bottomright: 8px
+  border-bottom-right-radius: 8px
+
+.bottomleft
+  -webkit-border-bottom-left-radius: 8px
+  -moz-border-radius-bottomleft: 8px
+  border-bottom-left-radius: 8px
