@@ -1,0 +1,76 @@
+!!!
+%html{ :lang => "en" }
+  /
+    Add in production to cache offline: manifest="production.manifest"
+  %head
+    %meta{ :charset => "UTF-8" }
+    %meta{ :name => "viewport", :content => "width=320; initial-scale=1.0; maximum-scale=1; user-scalable=0;" }
+    %meta{ :name => "apple-mobile-web-app-capable", :content => "yes" }
+    %link{ :href => "apple-touch-icon.png", :rel => "apple-touch-icon" }
+    %link{ :href => "apple-touch-startup.png", :rel => "apple-touch-startup-image" }
+    %title
+      Truth Tables
+    %style{ :media => "screen", :type => "text/css" }
+      @import "/mobile/jqtouch/jqtouch.css";
+    %style{ :media => "screen", :type => "text/css" }
+      @import "/mobile/jqtouch/themes/apple/theme.css";
+    %style{ :media => "screen", :type => "text/css" }
+      @import "/mobile/mobile.css";
+    %script{ :src => "/mobile/jqtouch/jquery-1.4.2.min.js", :type => "text/javascript" }
+    %script{ :src => "/mobile/jqtouch/jqtouch.js", :type => "text/javascript" }
+    %script{ :src => "/mobile/mobile.js", :type => "text/javascript" }
+  %body
+    #jqt
+      #home.current
+        .toolbar
+          %h1
+            Truth Tables
+        %ul.rounded
+          %li.arrow
+            %a{ :href => "#or" }
+              OR
+          %li.arrow
+            %a{ :href => "#xor" }
+              XOR
+          %li.arrow
+            %a{ :href => "#nor" }
+              NOR
+          %li.arrow
+            %a{ :href => "#and" }
+              AND
+          %li.arrow
+            %a{ :href => "#nand" }
+              NAND
+        .info
+          %p
+            © 2010 John Topley
+      #or
+        .toolbar
+          %a.back
+            Back
+          %h1
+            OR ∨
+      #xor
+        .toolbar
+          %a.back
+            Back
+          %h1
+            XOR ⊕
+      #nor
+        .toolbar
+          %a.back
+            Back
+          %h1
+            NOR ↓
+      #and
+        .toolbar
+          %a.back
+            Back
+          %h1
+            AND ∧
+      #nand
+        .toolbar
+          %a.back
+            Back
+          %h1
+            NAND ↑
