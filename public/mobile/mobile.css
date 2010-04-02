@@ -9,6 +9,26 @@ body {
   padding: 0;
   width: 100%;
 }
+li table {
+  border-collapse: collapse;
+}
+li tr {
+  border-bottom: 1px solid #B4B4B4;
+}
+li tr.last {
+  border-bottom: none;
+}
+li td {
+  padding: 10px 25px;
+  text-align: left;
+}
+.column1 {
+  border-right: 1px solid #B4B4B4;
+}
+.result {
+  border-left: 1px solid #B4B4B4;
+  color: #000;
+}
 #arrow {
   background: -webkit-canvas(arrow) no-repeat top center;
   bottom: 120px;
