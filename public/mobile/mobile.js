@@ -5,7 +5,6 @@ var jQT = new $.jQTouch({
   preloadImages: [
     "/mobile/jqtouch/themes/apple/img/backButton.png",
     "/mobile/jqtouch/themes/apple/img/chevron.png",
-    "/mobile/jqtouch/themes/apple/img/grayButton.png",
     "/mobile/jqtouch/themes/apple/img/listGroup.png",
     "/mobile/jqtouch/themes/apple/img/loading.gif",
     "/mobile/jqtouch/themes/apple/img/pinstripes.png",
