@@ -1,45 +1,50 @@
 !!!
-%html{ :lang => "en", :manifest => "production.manifest" }
+%html{:lang => "en", :manifest => "production.manifest"}
   %head
-    %meta{ :charset => "UTF-8" }
-    %meta{ :name => "viewport", :content => "width=320; initial-scale=1.0; maximum-scale=1; user-scalable=0;" }
-    %meta{ :name => "apple-mobile-web-app-capable", :content => "yes" }
-    %link{ :href => "apple-touch-icon.png", :rel => "apple-touch-icon" }
-    %link{ :href => "apple-touch-startup.png", :rel => "apple-touch-startup-image" }
+    %meta{:charset => "UTF-8"}
+    %meta{:name => "viewport", :content => "width=320; initial-scale=1.0; maximum-scale=1; user-scalable=0;"}
+    %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
+    %link{:href => "apple-touch-icon.png", :rel => "apple-touch-icon"}
+    %link{:href => "apple-touch-startup.png", :rel => "apple-touch-startup-image"}
     %title
       Truth Tables
-    %style{ :media => "screen", :type => "text/css" }
+    %style{:media => "screen", :type => "text/css"}
       @import "/mobile/jqtouch/jqtouch.css";
-    %style{ :media => "screen", :type => "text/css" }
+    %style{:media => "screen", :type => "text/css"}
       @import "/mobile/jqtouch/themes/apple/theme.css";
-    %style{ :media => "screen", :type => "text/css" }
+    %style{:media => "screen", :type => "text/css"}
       @import "/mobile/mobile.css";
-    %script{ :src => "/mobile/jqtouch/jquery-1.4.2.min.js", :type => "text/javascript" }
-    %script{ :src => "/mobile/jqtouch/jqtouch.js", :type => "text/javascript" }
-    %script{ :src => "/mobile/mobile.js", :type => "text/javascript" }
+    %script{:src => "/mobile/jqtouch/jquery-1.4.2.min.js", :type => "text/javascript"}
+    %script{:src => "/mobile/jqtouch/jqtouch.js", :type => "text/javascript"}
+    %script{:src => "/mobile/mobile.js", :type => "text/javascript"}
   %body
     #jqt
       #home.current
         .toolbar
           %h1
             Truth Tables
-          %a{ :href => "#about", :class => "button cube"}
+          %a{:href => "#about", :class => "button slideup"}
             About
         %ul.rounded
           %li.arrow
-            %a{ :href => "#or" }
+            %a{:href => "#or"}
+              %img{:src => "/table.png", :alt => "", :height => "15", :width => "20"}
               OR
           %li.arrow
-            %a{ :href => "#xor" }
+            %a{:href => "#xor"}
+              %img{:src => "/table.png", :alt => "", :height => "15", :width => "20"}
               XOR
           %li.arrow
-            %a{ :href => "#nor" }
+            %a{:href => "#nor"}
+              %img{:src => "/table.png", :alt => "", :height => "15", :width => "20"}
               NOR
           %li.arrow
-            %a{ :href => "#and" }
+            %a{:href => "#and"}
+              %img{:src => "/table.png", :alt => "", :height => "15", :width => "20"}
               AND
           %li.arrow
-            %a{ :href => "#nand" }
+            %a{:href => "#nand"}
+              %img{:src => "/table.png", :alt => "", :height => "15", :width => "20"}
               NAND
       #or
         .toolbar
@@ -52,31 +57,55 @@
             %table
               %tr
                 %td.column1
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td.result
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
               %tr
                 %td.column1
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td.result
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
               %tr
                 %td.column1
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td.result
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
               %tr.last
                 %td.column1
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td.result
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
       #xor
         .toolbar
@@ -89,31 +118,55 @@
             %table
               %tr
                 %td.column1
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td.result
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
               %tr
                 %td.column1
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td.result
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
               %tr
                 %td.column1
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td.result
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
               %tr.last
                 %td.column1
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td.result
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
       #nor
         .toolbar
@@ -126,31 +179,55 @@
             %table
               %tr
                 %td.column1
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td.result
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
               %tr
                 %td.column1
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td.result
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
               %tr
                 %td.column1
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td.result
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
               %tr.last
                 %td.column1
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td.result
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
       #and
         .toolbar
@@ -163,31 +240,55 @@
             %table
               %tr
                 %td.column1
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td.result
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
               %tr
                 %td.column1
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td.result
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
               %tr
                 %td.column1
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td.result
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
               %tr.last
                 %td.column1
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td.result
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
       #nand
         .toolbar
@@ -200,31 +301,55 @@
             %table
               %tr
                 %td.column1
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td.result
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
               %tr
                 %td.column1
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td.result
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
               %tr
                 %td.column1
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
                 %td.result
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
               %tr.last
                 %td.column1
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td
+                  %img{:src => "/false.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   false
                 %td.result
+                  %img{:src => "/true.png", :alt => "", :height => "19", :width => "18"}
+                  %br/
                   true
       #about
         .toolbar
@@ -234,9 +359,18 @@
             About
         %ul.rounded
           %li
-            Truth Tables
-          %li
-            A programmer’s reference
+            %span{:style => "color: #000;"}
+              %img{:src => "/info.png", :alt => "", :height => "19", :width => "19"}
+              Truth Tables
+              %br/
+              %span{:style => "color: #666;"}
+                a programmer’s reference
         %ul.rounded
           %li
-            © 2010 John Topley
+            %span{:style => "color: #000;"}
+              © 2010 John Topley
+              %br/
+              %span{:style => "color: #666; font-size: 80%;"}
+                http://johntopley.com/
+                %br/
+                http://github.com/johntopley/truthtables
