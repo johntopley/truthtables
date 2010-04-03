@@ -3,10 +3,13 @@ if (!window.navigator.standalone) {
 }
 var jQT = new $.jQTouch({
   preloadImages: [
+    "/false.png",
+    "/info.png",
+    "/table.png",
+    "/true.png",
     "/mobile/jqtouch/themes/apple/img/backButton.png",
     "/mobile/jqtouch/themes/apple/img/chevron.png",
     "/mobile/jqtouch/themes/apple/img/listGroup.png",
-    "/mobile/jqtouch/themes/apple/img/loading.gif",
     "/mobile/jqtouch/themes/apple/img/pinstripes.png",
     "/mobile/jqtouch/themes/apple/img/selection.png",
     "/mobile/jqtouch/themes/apple/img/thumb.png",
