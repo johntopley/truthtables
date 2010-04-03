@@ -23,6 +23,8 @@
         .toolbar
           %h1
             Truth Tables
+          %a{ :href => "#about", :class => "button cube"}
+            About
         %ul.rounded
           %li.arrow
             %a{ :href => "#or" }
@@ -39,9 +41,6 @@
           %li.arrow
             %a{ :href => "#nand" }
               NAND
-        .info
-          %p
-            © 2010 John Topley
       #or
         .toolbar
           %a.back
@@ -227,3 +226,17 @@
                   false
                 %td.result
                   true
+      #about
+        .toolbar
+          %a.back
+            Back
+          %h1
+            About
+        %ul.rounded
+          %li
+            Truth Tables
+          %li
+            A programmer’s reference
+        %ul.rounded
+          %li
+            © 2010 John Topley
