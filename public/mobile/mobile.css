@@ -11,6 +11,7 @@ body {
 }
 li table {
   border-collapse: collapse;
+  width: 100%;
 }
 li tr {
   border-bottom: 1px solid #B4B4B4;
@@ -19,7 +20,7 @@ li tr.last {
   border-bottom: none;
 }
 li td {
-  padding: 10px 25px;
+  padding: 10px 10%;
   text-align: left;
 }
 .column1 {
