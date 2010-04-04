@@ -14,7 +14,8 @@ get '/', :agent => /Apple.*Mobile.*Safari/ do
 end
 
 get '/installation', :agent => /Apple.*Mobile.*Safari/ do
-  haml :installation
+  #haml :installation
+  redirect '/installation.html'
 end
 
 get '/installation' do
@@ -29,4 +30,9 @@ end
 get '/web.css' do
   headers 'Content-Type' => 'text/css; charset=utf-8'
   sass :web
+end
+
+get "/production.manifest" do
+  content_type 'text/cache-manifest'
+  File.read(File.join('public', 'production.manifest'))
 end

@@ -1,10 +1,11 @@
 CACHE MANIFEST
-# Rev 2010-04-04
+# Rev 2010-04-04 0.1
 
 ./apple-touch-icon.png
 ./apple-touch-startup.png
 ./false.png
 ./info.png
+./installation.html
 ./iphone.html
 ./table.png
 ./true.png
