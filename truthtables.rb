@@ -9,7 +9,8 @@ before do
 end
 
 get '/', :agent => /Apple.*Mobile.*Safari/ do
-  haml :iphone
+  #haml :iphone
+  redirect '/iphone.html'
 end
 
 get '/installation', :agent => /Apple.*Mobile.*Safari/ do
@@ -17,7 +18,8 @@ get '/installation', :agent => /Apple.*Mobile.*Safari/ do
 end
 
 get '/installation' do
-  haml :iphone
+  #haml :iphone
+  redirect '/iphone.html'
 end
 
 get '/' do
