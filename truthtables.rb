@@ -4,6 +4,10 @@ require 'sass'
 
 set :haml, { :format => :html5 }
 
+configure do
+	Rack::Mime::MIME_TYPES['.manifest'] = 'text/cache-manifest'
+end
+
 before do
   headers 'Content-Type' => 'text/html; charset=utf-8'
 end
@@ -27,9 +31,4 @@ end
 get '/web.css' do
   headers 'Content-Type' => 'text/css; charset=utf-8'
   sass :web
-end
-
-get "/cache.manifest" do
-  content_type 'text/cache-manifest'
-  File.read(File.join('public', 'cache.manifest'))
 end
