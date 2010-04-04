@@ -9,18 +9,15 @@ before do
 end
 
 get '/', :agent => /Apple.*Mobile.*Safari/ do
-  #haml :iphone
-  redirect '/iphone.html'
+  haml :iphone
 end
 
 get '/installation', :agent => /Apple.*Mobile.*Safari/ do
-  #haml :installation
-  redirect '/installation.html'
+  haml :installation
 end
 
 get '/installation' do
-  #haml :iphone
-  redirect '/iphone.html'
+  haml :iphone
 end
 
 get '/' do
@@ -32,7 +29,7 @@ get '/web.css' do
   sass :web
 end
 
-get "/production.manifest" do
+get "/cache.manifest" do
   content_type 'text/cache-manifest'
-  File.read(File.join('public', 'production.manifest'))
+  File.read(File.join('public', 'cache.manifest'))
 end
