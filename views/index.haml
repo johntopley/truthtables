@@ -1,148 +1,33 @@
 !!!
-%html{ :lang => 'en' }
+%html{ :lang => "en", :manifest => "/cache.manifest" }
   %head
-    %meta{ :charset => 'UTF-8' }
-    %title Truth Tables
-    %link{ :href => '/web.css', :rel => 'stylesheet', :media => 'all' }
-  %body
-    %h1
+    %meta{ :charset => "UTF-8" }
+    %meta{ :name => "viewport", :content => "width=320; initial-scale=1.0; maximum-scale=1; user-scalable=0;" }
+    %meta{ :name => "apple-mobile-web-app-capable", :content => "yes" }
+    %link{ :href => "apple-touch-icon.png", :rel => "apple-touch-icon" }
+    %link{ :href => "apple-touch-startup.png", :rel => "apple-touch-startup-image" }
+    %link{ :href => "apple-touch-icon.png", :rel => "apple-touch-icon" }
+    %title
       Truth Tables
-    %h2
-      a programmer’s reference
-    %table#and
-      %thead
-        %tr
-          %th.operation
-            AND
-            %span.symbol
-              ∧
-          %th
-            true
-          %th.topright
-            false
-      %tbody
-        %tr
-          %td.input
-            true
-          %td
-            true
-          %td.false
-            false
-        %tr
-          %td.input.bottomleft
-            false
-          %td.false
-            false
-          %td.false.bottomright
-            false
-    %table#nand
-      %thead
-        %tr
-          %th.operation
-            NAND
-            %span.symbol
-              ↑
-          %th
-            true
-          %th.topright
-            false
-      %tbody
-        %tr
-          %td.input
-            true
-          %td.false
-            false
-          %td
-            true
-        %tr
-          %td.input.bottomleft
-            false
-          %td
-            true
-          %td.bottomright
-            true
-    %table#nor
-      %thead
-        %tr
-          %th.operation
-            NOR
-            %span.symbol
-              ↓
-          %th
-            true
-          %th.topright
-            false
-      %tbody
-        %tr
-          %td.input
-            true
-          %td.false
-            false
-          %td.false
-            false
-        %tr
-          %td.input.bottomleft
-            false
-          %td.false
-            false
-          %td.bottomright
-            true
-    %table#or
-      %thead
-        %tr
-          %th.operation
-            OR
-            %span.symbol
-              ∨
-          %th
-            true
-          %th.topright
-            false
-      %tbody
-        %tr
-          %td.input
-            true
-          %td
-            true
-          %td
-            true
-        %tr
-          %td.input.bottomleft
-            false
-          %td
-            true
-          %td.false.bottomright
-            false
-    %table#xor
-      %thead
-        %tr
-          %th.operation
-            XOR
-            %span.symbol
-              ⊕
-          %th
-            true
-          %th.topright
-            false
-      %tbody
-        %tr
-          %td.input
-            true
-          %td.false
-            false
-          %td
-            true
-        %tr
-          %td.input.bottomleft
-            false
-          %td
-            true
-          %td.false.bottomright
-            false
-    %p
-      \©2010
-      %a{ :href => 'http://johntopley.com/' }
-        John Topley
-      |
-      %a{ :href => 'http://github.com/johntopley/truthtables' }
-        Source
+    %style{ :media => "screen", :type => "text/css" }
+      @import "/mobile/mobile.css";
+  %body
+    #installation
+      %p{ :style => "line-height: 22px; text-align: center; margin-top: 150px;" }
+        To install Truth Tables, tap the
+        %span{ :style => "color: #fff; font-size: 20px; line-height: 20px;" }
+          +
+        button below and choose
+        %span{ :style => "color: #fff;" }
+          Add to Home Screen
+        \.
+      #arrow
+    %script{ :type => "text/javascript" }
+      var ctx = document.getCSSCanvasContext("2d", "arrow", 30, 30);
+      ctx.fillStyle = "rgb(255,255,255)";
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(30, 0);
+      ctx.lineTo(15,23);
+      ctx.closePath();
+      ctx.fill();

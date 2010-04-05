@@ -5,7 +5,7 @@ require 'sass'
 set :haml, { :format => :html5 }
 
 configure do
-	Rack::Mime::MIME_TYPES['.manifest'] = 'text/cache-manifest'
+  Rack::Mime::MIME_TYPES['.manifest'] = 'text/cache-manifest'
 end
 
 before do
@@ -13,19 +13,11 @@ before do
 end
 
 get '/', :agent => /Apple.*Mobile.*Safari/ do
-  haml :iphone
-end
-
-get '/installation', :agent => /Apple.*Mobile.*Safari/ do
-  haml :installation
-end
-
-get '/installation' do
-  haml :iphone
+  redirect '/iphone.html'
 end
 
 get '/' do
-  haml :index
+  haml :web
 end
 
 get '/web.css' do
