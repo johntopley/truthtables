@@ -16,6 +16,10 @@ get '/', :agent => /Apple.*Mobile.*Safari/ do
   redirect '/iphone.html'
 end
 
+get '/installation.html', :agent => /Apple.*Mobile.*Safari/ do
+  redirect '/iphone.html'
+end
+
 get '/' do
   haml :index
 end
