@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" manifest="cache.manifest">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=320; initial-scale=1.0; maximum-scale=1; user-scalable=0;" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="apple-touch-startup.png" rel="apple-touch-startup-image" />
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" />
+    <title>
+      Truth Tables
+    </title>
+    <style media="screen" type="text/css">
+      @import "/mobile/mobile.css";
+    </style>
+  </head>
+  <body>
+    <div id="installation">
+      <p style="line-height: 22px; text-align: center; margin-top: 150px;">To install Truth Tables, tap the<span style="color: #fff; font-size: 20px; line-height: 20px;">+</span> button below and choose <span style="color: #fff;">Add to Home Screen</span>.</p>
+      <div id="arrow"></div>
+    </div>
+    <script type="text/javascript">
+      var ctx = document.getCSSCanvasContext("2d", "arrow", 30, 30);
+      ctx.fillStyle = "rgb(255,255,255)";
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(30, 0);
+      ctx.lineTo(15,23);
+      ctx.closePath();
+      ctx.fill();
+    </script>
+  </body>
+</html>
