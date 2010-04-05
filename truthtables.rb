@@ -17,7 +17,7 @@ get '/', :agent => /Apple.*Mobile.*Safari/ do
 end
 
 get '/' do
-  haml :web
+  haml :index
 end
 
 get '/web.css' do
