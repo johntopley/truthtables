@@ -12,10 +12,12 @@ before do
   headers 'Content-Type' => 'text/html; charset=utf-8'
 end
 
+# iPhone handlers
 get '/', :agent => /Apple.*Mobile.*Safari/ do
   redirect '/iphone.html'
 end
 
+# Web handlers
 get '/' do
   haml :index
 end

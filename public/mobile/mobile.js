@@ -1,3 +1,6 @@
+if (!window.navigator.standalone) {
+  document.location.href = "/installation.html";
+}
 var jQT = new $.jQTouch({
   preloadImages: [
     "/false.png",
