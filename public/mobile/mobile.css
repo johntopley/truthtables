@@ -42,6 +42,9 @@ li td {
   position: absolute;
   width: 100%;
 }
+#container, #installation {
+  display: none;
+}
 #installation {
   background: #2b4c0a -webkit-gradient(linear, center top, center bottom, from(rgba(255,255,255,.2)), color-stop(.3, rgba(255,255,255,0)), to(rgba(255,255,255,0)));
   color: #b5f278;
