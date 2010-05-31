@@ -1,12 +1,9 @@
 require 'sinatra'
 require 'haml'
 require 'sass'
+require 'manifesto'
 
 set :haml, { :format => :html5 }
-
-configure do
-  Rack::Mime::MIME_TYPES['.manifest'] = 'text/cache-manifest'
-end
 
 before do
   headers 'Content-Type' => 'text/html; charset=utf-8'
@@ -18,6 +15,11 @@ end
 
 get '/' do
   haml :index
+end
+
+get '/manifest' do
+  headers 'Content-Type' => 'text/cache-manifest'
+  Manifesto.cache
 end
 
 get '/web.css' do
