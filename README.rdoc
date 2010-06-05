@@ -4,4 +4,4 @@ Truth Tables is a handy Boolean algebra reference for programmers.
 
 == Dependencies
 
-* Truth Tables uses the haml and sass gems
+* Truth Tables uses the haml, sass and {manifesto}[http://github.com/johntopley/manifesto] gems
